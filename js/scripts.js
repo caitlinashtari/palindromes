@@ -1,10 +1,10 @@
 /* Back-end --------------*/
 var palindrome;
-var word;
-
-for(i = 0; i <= palindrome.length; i++){
-  if
+var word = function(input){
+  for(i = 0; i <= palindrome.length; i++){
+    if(input.charAt(i)) !== input.charAt()
 }
+};
 
 
 

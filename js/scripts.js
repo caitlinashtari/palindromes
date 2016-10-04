@@ -1,10 +1,24 @@
 /* Back-end --------------*/
-var palindrome;
-var word = function(input){
-  for(i = 0; i <= palindrome.length; i++){
-    if(input.charAt(i)) !== input.charAt()
+var palindrome = function(input){
+  for(i = 0; i <= input.length; i += 1){
+    if(input.charAt(i) === (input.split("").reverse().join("").charAt(i))){
+      return true;
+    } else {
+      return false;
+    }
 }
 };
+/* Front-end --------------*/
+$(document).ready(function(){
+  $("form#palindrome").submit(function(event){
+    event.preventDefault();
+    var input = $("input#word").val();
+    var result = palindrome(input);
+    $("#result").text(result);
+  });
+});
+
+
 
 
 
@@ -15,14 +29,3 @@ var word = function(input){
 //     return false;
 //   }
 // };
-
-
-/* Front-end --------------*/
-$(document).ready(function(){
-  $("form#palindrome").submit(function(event){
-    event.preventDefault();
-    var word = $("input#word").val();
-    var result = palindrome(word);
-    $("#result").text(result);
-  });
-});
